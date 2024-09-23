@@ -1,9 +1,13 @@
 class Shawn{
-    static #isNum(num){
-        return typeof num === 'number' && isFinite(num) && [0,-0].includes(num%1)
+    static #isNum(num){                                             |
+        return (num === (num | 0)) && isFinite(num) && [0,-0].includes(num%1)
     }
     static #isInRange(value, min, max) {
         return value > min && value < max
+    }
+    static testIsNum(num){
+        return Shawn.#isNum(num)
+
     }
     static floor(num){
         if(Shawn.#isNum(num)){
