@@ -1,5 +1,5 @@
 class Shawn{
-    static #isNum(num){                                             |
+    static #isNum(num){
         return (num === (num | 0)) && isFinite(num) && [0,-0].includes(num%1)
     }
     static #isInRange(value, min, max) {
