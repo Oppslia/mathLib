@@ -53,7 +53,7 @@ class Shawn{
     static multiply(a,b){return (a*b)}
     static power(a,b){return (a^b)}
     static abs(a){
-        if (a<0){
+        if (a<=0){
             console.log(a)
             return (a * -1)
         }
@@ -78,29 +78,6 @@ class Shawn{
         return result
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
