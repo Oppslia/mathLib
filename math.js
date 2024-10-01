@@ -51,7 +51,11 @@ class Shawn{
     static add(a,b){return (a+b)}
     static subtract(a,b){return (a-b)}
     static multiply(a,b){return (a*b)}
-    static power(a,b){return (a^b)}
+    static power(a,b){
+        if(b<0){
+            return (1/(a**Shawn.abs(b)))
+        }
+        return (a**b)}
     static abs(a){
         if (a<=0){
             console.log(a)
@@ -96,3 +100,5 @@ console.log(Shawn.ceil(-1.2))
 console.log(Math.ceil(-1.2))
 console.log(Shawn.ceil(1.2))
 console.log(Math.ceil(1.2))
+
+0 - (-1)

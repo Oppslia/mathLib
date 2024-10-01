@@ -5,6 +5,12 @@ test('Shawn.add should add two numbers together', () => {
     expect(Shawn.add(-20,10)).toBe(-10)
     expect(Shawn.add(20,-5)).toBe(15)
 })
+test('Shawn.subtract should subtract two numbers', () => {
+    expect(Shawn.subtract(0,-1)).toBe(1)
+    expect(Shawn.subtract(5,6)).toBe(-1)
+    expect(Shawn.subtract(-20,10)).toBe(-30)
+    expect(Shawn.subtract(20,-5)).toBe(25)
+})
 test('Shawn.round should round to the nearest whole number.', () => {
     expect(Shawn.round(-.25)).toBe(0)
     expect(Shawn.round(.25)).toBe(0)
@@ -104,4 +110,14 @@ test('Shawn.isNum() disregard all non integer numbers', () => {
     expect(Shawn.testIsNum(Infinity)).toBe(false)  // technically a number, but not one that works in this library
     
 })
+test('Shawn.power() disregard all non integer numbers', () => {
+    expect(Shawn.power(2,-2)).toBe(.25)
+    expect(Shawn.power(-2,-2)).toBe(.25)
+    expect(Shawn.power(-2,2)).toBe(4)
+    expect(Shawn.power(-2,3)).toBe(-8)
+    expect(Shawn.power(2,3)).toBe(8)
+    expect(Shawn.power(0,3)).toBe(0)
+    expect(Shawn.power(3,0)).toBe(1)
+    expect(Shawn.power(0,0)).toBe(1)
 
+})
