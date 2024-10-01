@@ -110,7 +110,7 @@ test('Shawn.isNum() disregard all non integer numbers', () => {
     expect(Shawn.testIsNum(Infinity)).toBe(false)  // technically a number, but not one that works in this library
     
 })
-test('Shawn.power() disregard all non integer numbers', () => {
+test('Shawn.power()', () => {
     expect(Shawn.power(2,-2)).toBe(.25)
     expect(Shawn.power(-2,-2)).toBe(.25)
     expect(Shawn.power(-2,2)).toBe(4)
